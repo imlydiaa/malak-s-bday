@@ -1,0 +1,2657 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy 19th Birthday, Sis! 🎀</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Quicksand:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: #fdf0f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 550px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 48px;
+    padding: 40px 30px;
+    box-shadow:
+        0 25px 50px -8px rgba(255, 105, 180, 0.25),
+        0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+    text-align: center;
+    border: 1px solid rgba(255, 182, 193, 0.3);
+}
+
+/* =========================
+   BIRTHDAY SCREEN
+========================= */
+
+#birthdayScreen {
+    display: block;
+    animation: floatUp 1s ease-out;
+}
+
+.birthday-emoji {
+    font-size: 70px;
+    display: block;
+    margin-bottom: 10px;
+    animation: sparkle 2.5s infinite;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: #b34a6b;
+    margin-bottom: 5px;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+.sub-title {
+    font-size: 1.1rem;
+    color: #d47b9e;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    border-top: 1px solid #fbc4d0;
+    border-bottom: 1px solid #fbc4d0;
+    padding: 10px 0;
+    display: inline-block;
+}
+
+.chic-line {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #ffb6c1, #ff85a2);
+    margin: 15px auto 25px auto;
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background: linear-gradient(145deg, #ff8aae, #f55b7c);
+    border: none;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 14px 45px;
+    border-radius: 60px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(245, 91, 124, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 14px 28px rgba(245, 91, 124, 0.4);
+}
+
+.btn-primary:active {
+    transform: scale(0.96);
+}
+
+/* =========================
+   GAME LOUNGE
+========================= */
+
+#gameLounge {
+    display: none;
+    animation: fadeIn 0.6s ease;
+}
+
+.lounge-header {
+    margin-bottom: 28px;
+}
+
+.lounge-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #b34a6b;
+}
+
+.lounge-header p {
+    color: #b16f86;
+    font-size: 0.95rem;
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+.game-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 25px 0 20px 0;
+}
+
+.game-card {
+    background: white;
+    border-radius: 28px;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(255, 105, 180, 0.08);
+    border: 1px solid rgba(255, 182, 193, 0.3);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.game-card:hover {
+    transform: translateX(8px) scale(1.01);
+    border-color: #ff85a2;
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.15);
+}
+
+.game-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.game-icon {
+    font-size: 2rem;
+    width: 48px;
+    text-align: center;
+}
+
+.game-name {
+    font-weight: 600;
+    color: #3d2a33;
+    font-size: 1rem;
+}
+
+.game-desc {
+    font-size: 0.75rem;
+    color: #b18597;
+    font-weight: 400;
+    display: block;
+    text-align: left;
+}
+
+.play-arrow {
+    font-size: 1.4rem;
+    color: #f55b7c;
+    opacity: 0.6;
+    transition: 0.2s;
+}
+
+.game-card:hover .play-arrow {
+    opacity: 1;
+    transform: translateX(4px);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1.5px solid #fbc4d0;
+    color: #b34a6b;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 60px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.btn-secondary:hover {
+    background: #fff0f5;
+    border-color: #ff85a2;
+}
+
+/* =========================
+   GAME AREA
+========================= */
+
+#gameArea {
+    display: none;
+    margin-top: 20px;
+    animation: fadeIn 0.4s ease;
+}
+
+.game-title {
+    font-family: 'Playfair Display', serif;
+    color: #b34a6b;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.game-instructions {
+    color: #a05a75;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.game-screen {
+    background: white;
+    border-radius: 25px;
+    padding: 15px;
+    border: 2px solid #ffe1e9;
+    box-shadow: 0 10px 25px rgba(255, 105, 180, 0.1);
+}
+
+.close-game-btn {
+    background: #ffeef2;
+    border: none;
+    color: #b34a6b;
+    padding: 12px;
+    border-radius: 40px;
+    font-weight: 600;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 12px;
+    font-size: 0.9rem;
+}
+
+.close-game-btn:hover {
+    background: #ffd9e2;
+}
+
+.score {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #b34a6b;
+    margin: 10px;
+}
+
+/* =========================
+   FLAPPY CHIC
+========================= */
+
+#flappyCanvas {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 20px;
+    background: linear-gradient(#ffe5f0, #fff8fb);
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+/* =========================
+   CATCH THE HEARTS
+========================= */
+
+#heartCanvas {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    background: linear-gradient(#fff1f6, #fffafc);
+    border-radius: 20px;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz-question {
+    color: #b34a6b;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    margin: 15px 0;
+}
+
+.quiz-option {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 13px;
+    border: 1px solid #fbc4d0;
+    background: #fff8fa;
+    border-radius: 20px;
+    color: #7f4b5e;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.quiz-option:hover {
+    background: #ffe5ed;
+    transform: scale(1.02);
+}
+
+#quizResult {
+    font-weight: 600;
+    color: #b34a6b;
+    margin: 15px 0;
+    min-height: 25px;
+}
+
+/* =========================
+   TIC TAC TOE
+========================= */
+
+.ttt-status {
+    color: #b34a6b;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 10px 0 15px;
+}
+
+.ttt-board {
+    width: 280px;
+    height: 280px;
+    max-width: 100%;
+    margin: 15px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.ttt-cell {
+    background: #fff3f7;
+    border: 2px solid #fbc4d0;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #b34a6b;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.ttt-cell:hover {
+    background: #ffe4ed;
+    transform: scale(1.03);
+}
+
+.ttt-cell.x {
+    color: #f55b7c;
+}
+
+.ttt-cell.o {
+    color: #b18597;
+}
+
+/* =========================
+   MEMORY MATCH
+========================= */
+
+.memory-info {
+    color: #b34a6b;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 10px 0 15px;
+}
+
+.memory-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    max-width: 360px;
+    margin: 15px auto;
+}
+
+.memory-card {
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #ff8aae, #f55b7c);
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: transparent;
+    transition: transform 0.2s, background 0.2s;
+    box-shadow: 0 4px 8px rgba(245, 91, 124, 0.2);
+}
+
+.memory-card:hover {
+    transform: scale(1.04);
+}
+
+.memory-card.flipped,
+.memory-card.matched {
+    background: #fff0f5;
+    color: #b34a6b;
+    border: 2px solid #fbc4d0;
+}
+
+.memory-card.matched {
+    opacity: 0.65;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes floatUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.98);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 28px 18px;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+    }
+
+    .birthday-emoji {
+        font-size: 55px;
+    }
+
+    .game-card {
+        padding: 14px 18px;
+    }
+
+    .ttt-board {
+        width: 250px;
+        height: 250px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- =========================
+     BIRTHDAY SCREEN
+========================== -->
+
+<div id="birthdayScreen">
+
+
+<span class="birthday-emoji">
+    🎂
+</span>
+
+<h1>
+    Happy 19th
+</h1>
+
+<div class="sub-title">
+    ✨ Birthday Queen ✨
+</div>
+
+<div class="chic-line"></div>
+
+<p style="color:#a05a75; font-weight:400; margin-bottom:10px; font-size:1rem;">
+    You're not getting older,<br>
+    you're just leveling up. 🌸
+</p>
+
+<button class="btn-primary"
+    onclick="showGames()">
+    🎮 Let's Play
+</button>
+
+
+</div>
+
+<!-- =========================
+     GAME LOUNGE
+========================== -->
+
+<div id="gameLounge">
+
+
+<div class="lounge-header">
+
+    <h2>
+        🌸 Game Lounge
+    </h2>
+
+    <p>
+        pick your vibe, Malak
+    </p>
+
+</div>
+
+
+<div class="game-grid">
+
+    <!-- 2048 -->
+
+    <div class="game-card"
+        onclick="load2048()">
+
+        <div class="game-info">
+
+            <span class="game-icon">
+                🧩
+            </span>
+
+            <div>
+
+                <div class="game-name">
+                    2048
+                </div>
+
+                <span class="game-desc">
+                    stylish number merging
+                </span>
+
+            </div>
+
+        </div>
+
+        <span class="play-arrow">
+            ➜
+        </span>
+
+    </div>
+
+
+    <!-- FLAPPY -->
+
+    <div class="game-card"
+        onclick="startFlappy()">
+
+        <div class="game-info">
+
+            <span class="game-icon">
+                🐦
+            </span>
+
+            <div>
+
+                <div class="game-name">
+                    Flappy Chic
+                </div>
+
+                <span class="game-desc">
+                    tap to fly through pink clouds
+                </span>
+
+            </div>
+
+        </div>
+
+        <span class="play-arrow">
+            ➜
+        </span>
+
+    </div>
+
+
+    <!-- HEARTS -->
+
+    <div class="game-card"
+        onclick="startHeartGame()">
+
+        <div class="game-info">
+
+            <span class="game-icon">
+                💗
+            </span>
+
+            <div>
+
+                <div class="game-name">
+                    Catch the Hearts
+                </div>
+
+                <span class="game-desc">
+                    catch as many hearts as you can
+                </span>
+
+            </div>
+
+        </div>
+
+        <span class="play-arrow">
+            ➜
+        </span>
+
+    </div>
+
+
+    <!-- QUIZ -->
+
+    <div class="game-card"
+        onclick="startQuiz()">
+
+        <div class="game-info">
+
+            <span class="game-icon">
+                🎀
+            </span>
+
+            <div>
+
+                <div class="game-name">
+                    Birthday Quiz
+                </div>
+
+                <span class="game-desc">
+                    how well do you know yourself?
+                </span>
+
+            </div>
+
+        </div>
+
+        <span class="play-arrow">
+            ➜
+        </span>
+
+    </div>
+
+
+    <!-- TIC TAC TOE -->
+
+    <div class="game-card"
+        onclick="startTicTacToe()">
+
+        <div class="game-info">
+
+            <span class="game-icon">
+                ⭕️
+            </span>
+
+            <div>
+
+                <div class="game-name">
+                    Tic-Tac-Toe
+                </div>
+
+                <span class="game-desc">
+                    beat the birthday AI
+                </span>
+
+            </div>
+
+        </div>
+
+        <span class="play-arrow">
+            ➜
+        </span>
+
+    </div>
+
+
+    <!-- MEMORY MATCH -->
+
+    <div class="game-card"
+        onclick="startMemory()">
+
+        <div class="game-info">
+
+            <span class="game-icon">
+                🎴
+            </span>
+
+            <div>
+
+                <div class="game-name">
+                    Memory Match
+                </div>
+
+                <span class="game-desc">
+                    find all the matching pairs
+                </span>
+
+            </div>
+
+        </div>
+
+        <span class="play-arrow">
+            ➜
+        </span>
+
+    </div>
+
+
+    <!-- STYLE STUDIO - MOVED HERE -->
+
+    <div class="game-card"
+        onclick="openStyleStudio()">
+
+        <div class="game-info">
+
+            <span class="game-icon">
+                💅
+            </span>
+
+            <div>
+
+                <div class="game-name">
+                    Malak's Style Studio
+                </div>
+
+                <span class="game-desc">
+                    create your perfect fashion look ✨
+                </span>
+
+            </div>
+
+        </div>
+
+        <span class="play-arrow">
+            ➜
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     GAME AREA
+========================== -->
+
+<div id="gameArea">
+
+    <!-- 2048 -->
+
+    <div id="game2048"
+        class="game-screen"
+        style="display:none;">
+
+        <h2 class="game-title">
+            🧩 2048
+        </h2>
+
+        <p class="game-instructions">
+            Swipe or use your keyboard to play!
+        </p>
+
+        <iframe id="gameIframe"
+            src=""
+            width="100%"
+            height="400"
+            style="border:none; border-radius:20px;"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+
+    <!-- FLAPPY -->
+
+    <div id="gameFlappy"
+        class="game-screen"
+        style="display:none;">
+
+        <h2 class="game-title">
+            🐦 Flappy Chic
+        </h2>
+
+        <p class="game-instructions">
+            Click or tap to make the bird fly!
+        </p>
+
+        <div class="score">
+            Score:
+            <span id="flappyScore">
+                0
+            </span>
+        </div>
+
+        <canvas id="flappyCanvas"
+            width="400"
+            height="500">
+        </canvas>
+
+        <button class="btn-primary"
+            onclick="startFlappyGame()">
+            🎀 Start / Restart
+        </button>
+
+    </div>
+
+
+    <!-- HEARTS -->
+
+    <div id="gameHearts"
+        class="game-screen"
+        style="display:none;">
+
+        <h2 class="game-title">
+            💗 Catch the Hearts
+        </h2>
+
+        <p class="game-instructions">
+            Move the basket and catch the falling hearts!
+        </p>
+
+        <div class="score">
+            Score:
+            <span id="heartScore">
+                0
+            </span>
+        </div>
+
+        <canvas id="heartCanvas"
+            width="400"
+            height="500">
+        </canvas>
+
+        <button class="btn-primary"
+            onclick="startHeartGame()">
+            💗 Start / Restart
+        </button>
+
+    </div>
+
+
+    <!-- QUIZ -->
+
+    <div id="gameQuiz"
+        class="game-screen"
+        style="display:none;">
+
+        <h2 class="game-title">
+            🎀 Birthday Quiz
+        </h2>
+
+        <p class="game-instructions">
+            Let's see how well you know yourself!
+        </p>
+
+        <div id="quizContent">
+
+            <div class="quiz-question"
+                id="quizQuestion">
+                Question
+            </div>
+
+            <div id="quizOptions">
+            </div>
+
+            <div id="quizResult">
+            </div>
+
+        </div>
+
+        <button class="btn-primary"
+            onclick="restartQuiz()">
+            🎀 Restart Quiz
+        </button>
+
+    </div>
+
+
+    <!-- TIC TAC TOE -->
+
+    <div id="gameTicTacToe"
+        class="game-screen"
+        style="display:none;">
+
+        <h2 class="game-title">
+            ⭕ Tic-Tac-Toe
+        </h2>
+
+        <p class="game-instructions">
+            You are X. Try to beat the birthday AI!
+        </p>
+
+        <div class="ttt-status"
+            id="tttStatus">
+            Your turn (X)
+        </div>
+
+        <div class="ttt-board"
+            id="tttBoard">
+        </div>
+
+        <button class="btn-primary"
+            onclick="startTicTacToe()">
+            🔄 New Game
+        </button>
+
+    </div>
+
+
+    <!-- MEMORY MATCH -->
+
+    <div id="gameMemory"
+        class="game-screen"
+        style="display:none;">
+
+        <h2 class="game-title">
+            🎴 Memory Match
+        </h2>
+
+        <p class="game-instructions">
+            Find all the matching pairs!
+        </p>
+
+        <div class="memory-info">
+
+            Moves:
+            <span id="memoryMoves">
+                0
+            </span>
+
+            &nbsp; | &nbsp;
+
+            Pairs:
+            <span id="memoryPairs">
+                0
+            </span>
+
+            / 8
+
+        </div>
+
+        <div class="memory-board"
+            id="memoryBoard">
+        </div>
+
+        <button class="btn-primary"
+            onclick="startMemory()">
+            🔄 New Game
+        </button>
+
+    </div>
+
+
+    <button class="close-game-btn"
+        onclick="closeGame()">
+        ✕ Close Game
+    </button>
+
+</div>
+
+
+<button class="btn-secondary"
+    onclick="goBackToBirthday()">
+    ← Back to birthday wish
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+/* =========================
+   GENERAL NAVIGATION
+========================= */
+
+function showGames() {
+
+    document.getElementById('birthdayScreen')
+        .style.display = 'none';
+
+    document.getElementById('gameLounge')
+        .style.display = 'block';
+
+}
+
+function goBackToBirthday() {
+
+    closeGame();
+
+    document.getElementById('gameLounge')
+        .style.display = 'none';
+
+    document.getElementById('birthdayScreen')
+        .style.display = 'block';
+
+}
+
+function openGame(gameId) {
+
+    closeGame();
+
+    document.getElementById('gameArea')
+        .style.display = 'block';
+
+    document.getElementById(gameId)
+        .style.display = 'block';
+
+    document.getElementById('gameArea')
+        .scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
+
+}
+
+function closeGame() {
+
+    stopFlappy();
+
+    stopHeartGame();
+
+    document.getElementById('gameArea')
+        .style.display = 'none';
+
+    document.getElementById('game2048')
+        .style.display = 'none';
+
+    document.getElementById('gameFlappy')
+        .style.display = 'none';
+
+    document.getElementById('gameHearts')
+        .style.display = 'none';
+
+    document.getElementById('gameQuiz')
+        .style.display = 'none';
+
+    document.getElementById('gameTicTacToe')
+        .style.display = 'none';
+
+    document.getElementById('gameMemory')
+        .style.display = 'none';
+
+    document.getElementById('gameIframe')
+        .src = '';
+
+}
+
+
+/* =========================
+   2048
+========================= */
+
+function load2048() {
+
+    openGame('game2048');
+
+    document.getElementById('gameIframe')
+        .src = 'https://www.crazygames.com/embed/2048';
+
+}
+
+
+/* =========================
+   FLAPPY CHIC
+========================= */
+
+const flappyCanvas =
+    document.getElementById('flappyCanvas');
+
+const flappyCtx =
+    flappyCanvas.getContext('2d');
+
+let flappyBird;
+
+let flappyPipes;
+
+let flappyScore = 0;
+
+let flappyRunning = false;
+
+let flappyAnimation;
+
+
+function startFlappy() {
+
+    openGame('gameFlappy');
+
+    startFlappyGame();
+
+}
+
+
+function startFlappyGame() {
+
+    cancelAnimationFrame(flappyAnimation);
+
+    flappyBird = {
+        x: 80,
+        y: 230,
+        width: 30,
+        height: 30,
+        velocity: 0
+    };
+
+    flappyPipes = [];
+
+    flappyScore = 0;
+
+    flappyRunning = true;
+
+    document.getElementById(
+        'flappyScore'
+    ).textContent = flappyScore;
+
+    addFlappyPipe();
+
+    flappyLoop();
+
+}
+
+
+function addFlappyPipe() {
+
+    const gap = 150;
+
+    const topHeight =
+        Math.random() * 200 + 50;
+
+    flappyPipes.push({
+
+        x: flappyCanvas.width,
+
+        top: topHeight,
+
+        bottom: topHeight + gap,
+
+        width: 55,
+
+        passed: false
+
+    });
+
+}
+
+
+function flappyJump() {
+
+    if (!flappyRunning) {
+
+        startFlappyGame();
+
+        return;
+
+    }
+
+    flappyBird.velocity = -7;
+
+}
+
+
+flappyCanvas.addEventListener(
+    'click',
+    flappyJump
+);
+
+
+document.addEventListener(
+    'keydown',
+    function(event) {
+
+        if (
+            event.code === 'Space' &&
+            flappyRunning
+        ) {
+
+            event.preventDefault();
+
+            flappyJump();
+
+        }
+
+    }
+);
+
+
+function flappyLoop() {
+
+    if (!flappyRunning) {
+        return;
+    }
+
+    flappyCtx.clearRect(
+        0,
+        0,
+        flappyCanvas.width,
+        flappyCanvas.height
+    );
+
+    flappyCtx.fillStyle = '#fff4f8';
+
+    flappyCtx.fillRect(
+        0,
+        0,
+        flappyCanvas.width,
+        flappyCanvas.height
+    );
+
+    flappyCtx.font = '35px Arial';
+
+    flappyCtx.fillText(
+        '☁️',
+        250,
+        80
+    );
+
+    flappyCtx.fillText(
+        '☁️',
+        40,
+        140
+    );
+
+    flappyBird.velocity += 0.35;
+
+    flappyBird.y += flappyBird.velocity;
+
+    flappyCtx.font = '30px Arial';
+
+    flappyCtx.fillText(
+        '🐦',
+        flappyBird.x,
+        flappyBird.y + 25
+    );
+
+    for (
+        let i = 0;
+        i < flappyPipes.length;
+        i++
+    ) {
+
+        const pipe = flappyPipes[i];
+
+        pipe.x -= 3;
+
+        flappyCtx.fillStyle = '#ff9fbb';
+
+        flappyCtx.fillRect(
+            pipe.x,
+            0,
+            pipe.width,
+            pipe.top
+        );
+
+        flappyCtx.fillRect(
+            pipe.x,
+            pipe.bottom,
+            pipe.width,
+            flappyCanvas.height
+        );
+
+        if (
+            !pipe.passed &&
+            pipe.x + pipe.width < flappyBird.x
+        ) {
+
+            pipe.passed = true;
+
+            flappyScore++;
+
+            document.getElementById(
+                'flappyScore'
+            ).textContent = flappyScore;
+
+        }
+
+        const birdLeft = flappyBird.x;
+
+        const birdRight =
+            flappyBird.x +
+            flappyBird.width;
+
+        const birdTop = flappyBird.y;
+
+        const birdBottom =
+            flappyBird.y +
+            flappyBird.height;
+
+        const pipeLeft = pipe.x;
+
+        const pipeRight =
+            pipe.x +
+            pipe.width;
+
+        if (
+
+            birdRight > pipeLeft &&
+
+            birdLeft < pipeRight &&
+
+            (
+                birdTop < pipe.top ||
+                birdBottom > pipe.bottom
+            )
+
+        ) {
+
+            gameOverFlappy();
+
+        }
+
+    }
+
+    if (
+        flappyPipes.length === 0 ||
+        flappyPipes[
+            flappyPipes.length - 1
+        ].x < 220
+    ) {
+
+        addFlappyPipe();
+
+    }
+
+    flappyPipes =
+        flappyPipes.filter(
+            pipe =>
+                pipe.x + pipe.width > 0
+        );
+
+    if (
+
+        flappyBird.y < 0 ||
+
+        flappyBird.y +
+        flappyBird.height >
+        flappyCanvas.height
+
+    ) {
+
+        gameOverFlappy();
+
+    }
+
+    flappyAnimation =
+        requestAnimationFrame(
+            flappyLoop
+        );
+
+}
+
+
+function gameOverFlappy() {
+
+    flappyRunning = false;
+
+    cancelAnimationFrame(
+        flappyAnimation
+    );
+
+    flappyCtx.fillStyle =
+        'rgba(255,255,255,0.85)';
+
+    flappyCtx.fillRect(
+        0,
+        180,
+        flappyCanvas.width,
+        130
+    );
+
+    flappyCtx.fillStyle =
+        '#b34a6b';
+
+    flappyCtx.font =
+        'bold 28px Quicksand';
+
+    flappyCtx.textAlign =
+        'center';
+
+    flappyCtx.fillText(
+        'Game Over 💗',
+        flappyCanvas.width / 2,
+        235
+    );
+
+    flappyCtx.font =
+        '18px Quicksand';
+
+    flappyCtx.fillText(
+        'Click Start / Restart',
+        flappyCanvas.width / 2,
+        275
+    );
+
+    flappyCtx.textAlign =
+        'left';
+
+}
+
+
+function stopFlappy() {
+
+    flappyRunning = false;
+
+    cancelAnimationFrame(
+        flappyAnimation
+    );
+
+}
+
+
+/* =========================
+   CATCH THE HEARTS
+========================= */
+
+const heartCanvas =
+    document.getElementById('heartCanvas');
+
+const heartCtx =
+    heartCanvas.getContext('2d');
+
+let basket = {
+
+    x: 170,
+
+    y: 450,
+
+    width: 60,
+
+    height: 25
+
+};
+
+let hearts = [];
+
+let heartScore = 0;
+
+let heartRunning = false;
+
+let heartAnimation;
+
+
+function startHeartGame() {
+
+    openGame('gameHearts');
+
+    hearts = [];
+
+    heartScore = 0;
+
+    basket.x = 170;
+
+    heartRunning = true;
+
+    document.getElementById(
+        'heartScore'
+    ).textContent = heartScore;
+
+    cancelAnimationFrame(
+        heartAnimation
+    );
+
+    heartLoop();
+
+}
+
+
+function moveBasket(event) {
+
+    const rect =
+        heartCanvas.getBoundingClientRect();
+
+    let mouseX =
+        event.clientX -
+        rect.left;
+
+    basket.x =
+        mouseX -
+        basket.width / 2;
+
+    if (
+        basket.x < 0
+    ) {
+
+        basket.x = 0;
+
+    }
+
+    if (
+        basket.x +
+        basket.width >
+        heartCanvas.width
+    ) {
+
+        basket.x =
+            heartCanvas.width -
+            basket.width;
+
+    }
+
+}
+
+
+heartCanvas.addEventListener(
+    'mousemove',
+    moveBasket
+);
+
+
+heartCanvas.addEventListener(
+    'touchmove',
+    function(event) {
+
+        event.preventDefault();
+
+        const rect =
+            heartCanvas.getBoundingClientRect();
+
+        const touch =
+            event.touches[0];
+
+        let touchX =
+            touch.clientX -
+            rect.left;
+
+        basket.x =
+            touchX -
+            basket.width / 2;
+
+    },
+    {
+        passive: false
+    }
+);
+
+
+function createHeart() {
+
+    hearts.push({
+
+        x:
+            Math.random() *
+            (heartCanvas.width - 30),
+
+        y: -30,
+
+        speed:
+            Math.random() * 2 + 2
+
+    });
+
+}
+
+
+function heartLoop() {
+
+    if (!heartRunning) {
+        return;
+    }
+
+    heartCtx.clearRect(
+        0,
+        0,
+        heartCanvas.width,
+        heartCanvas.height
+    );
+
+    heartCtx.fillStyle = '#fff4f8';
+
+    heartCtx.fillRect(
+        0,
+        0,
+        heartCanvas.width,
+        heartCanvas.height
+    );
+
+    if (
+        Math.random() < 0.035
+    ) {
+
+        createHeart();
+
+    }
+
+    heartCtx.font = '45px Arial';
+
+    heartCtx.fillText(
+        '🧺',
+        basket.x,
+        basket.y + 25
+    );
+
+    for (
+        let i = hearts.length - 1;
+        i >= 0;
+        i--
+    ) {
+
+        const heart =
+            hearts[i];
+
+        heart.y +=
+            heart.speed;
+
+        heartCtx.font =
+            '28px Arial';
+
+        heartCtx.fillText(
+            '💗',
+            heart.x,
+            heart.y
+        );
+
+        if (
+
+            heart.y + 20 >
+            basket.y &&
+
+            heart.y <
+            basket.y +
+            basket.height &&
+
+            heart.x + 20 >
+            basket.x &&
+
+            heart.x <
+            basket.x +
+            basket.width
+
+        ) {
+
+            heartScore++;
+
+            document.getElementById(
+                'heartScore'
+            ).textContent =
+                heartScore;
+
+            hearts.splice(
+                i,
+                1
+            );
+
+        }
+
+        else if (
+            heart.y >
+            heartCanvas.height
+        ) {
+
+            hearts.splice(
+                i,
+                1
+            );
+
+        }
+
+    }
+
+    heartAnimation =
+        requestAnimationFrame(
+            heartLoop
+        );
+
+}
+
+
+function stopHeartGame() {
+
+    heartRunning = false;
+
+    cancelAnimationFrame(
+        heartAnimation
+    );
+
+}
+
+
+/* =========================
+   BIRTHDAY QUIZ
+========================= */
+
+const quizQuestions = [
+
+    {
+
+        question:
+            'What is the best thing about being 19? 🎀',
+
+        options: [
+
+            'Being fabulous ✨',
+
+            'Getting older 😭',
+
+            'More responsibilities 💀',
+
+            'I have no idea 🤷‍♀️'
+
+        ],
+
+        answer: 0
+
+    },
+
+    {
+
+        question:
+            'What does every birthday queen deserve? 👑',
+
+        options: [
+
+            'Cake 🎂',
+
+            'Money 💸',
+
+            'Gifts 🎁',
+
+            'ALL OF THEM 💅'
+
+        ],
+
+        answer: 3
+
+    },
+
+    {
+
+        question:
+            'What is the correct birthday mood? 💗',
+
+        options: [
+
+            '✨ Main character energy ✨',
+
+            'Sleep all day 😴',
+
+            'Do homework 📚',
+
+            'Cry about getting older 😭'
+
+        ],
+
+        answer: 0
+
+    }
+
+];
+
+let currentQuestion = 0;
+
+let quizScore = 0;
+
+
+function startQuiz() {
+
+    openGame('gameQuiz');
+
+    restartQuiz();
+
+}
+
+
+function restartQuiz() {
+
+    currentQuestion = 0;
+
+    quizScore = 0;
+
+    showQuestion();
+
+}
+
+
+function showQuestion() {
+
+    const question =
+        quizQuestions[
+            currentQuestion
+        ];
+
+    document.getElementById(
+        'quizQuestion'
+    ).textContent =
+        question.question;
+
+    const optionsContainer =
+        document.getElementById(
+            'quizOptions'
+        );
+
+    optionsContainer.innerHTML =
+        '';
+
+    document.getElementById(
+        'quizResult'
+    ).textContent =
+        '';
+
+    question.options.forEach(
+
+        function(
+            option,
+            index
+        ) {
+
+            const button =
+                document.createElement(
+                    'button'
+                );
+
+            button.className =
+                'quiz-option';
+
+            button.textContent =
+                option;
+
+            button.onclick =
+                function() {
+
+                    answerQuiz(index);
+
+                };
+
+            optionsContainer.appendChild(
+                button
+            );
+
+        }
+
+    );
+
+}
+
+
+function answerQuiz(selected) {
+
+    const question =
+        quizQuestions[
+            currentQuestion
+        ];
+
+    if (
+        selected ===
+        question.answer
+    ) {
+
+        quizScore++;
+
+    }
+
+    currentQuestion++;
+
+    if (
+        currentQuestion <
+        quizQuestions.length
+    ) {
+
+        setTimeout(
+            showQuestion,
+            300
+        );
+
+    }
+
+    else {
+
+        showQuizResult();
+
+    }
+
+}
+
+
+function showQuizResult() {
+
+    document.getElementById(
+        'quizQuestion'
+    ).textContent =
+        '🎉 Quiz Complete! 🎉';
+
+    document.getElementById(
+        'quizOptions'
+    ).innerHTML =
+        '';
+
+    document.getElementById(
+        'quizResult'
+    ).textContent =
+        'You scored ' +
+        quizScore +
+        ' / ' +
+        quizQuestions.length +
+        '! 💗';
+
+}
+
+
+/* =========================
+   TIC TAC TOE
+   PLAYER = X
+   AI = O
+========================= */
+
+let tttBoard =
+    ['', '', '', '', '', '', '', '', ''];
+
+let tttGameOver = false;
+
+const tttWinningCombinations = [
+
+    [0, 1, 2],
+
+    [3, 4, 5],
+
+    [6, 7, 8],
+
+    [0, 3, 6],
+
+    [1, 4, 7],
+
+    [2, 5, 8],
+
+    [0, 4, 8],
+
+    [2, 4, 6]
+
+];
+
+
+function startTicTacToe() {
+
+    openGame(
+        'gameTicTacToe'
+    );
+
+    tttBoard =
+        ['', '', '', '', '', '', '', '', ''];
+
+    tttGameOver = false;
+
+    document.getElementById(
+        'tttStatus'
+    ).textContent =
+        'Your turn (X)';
+
+    renderTicTacToe();
+
+}
+
+
+function renderTicTacToe() {
+
+    const board =
+        document.getElementById(
+            'tttBoard'
+        );
+
+    board.innerHTML =
+        '';
+
+    tttBoard.forEach(
+
+        function(
+            cell,
+            index
+        ) {
+
+            const div =
+                document.createElement(
+                    'div'
+                );
+
+            div.className =
+                'ttt-cell';
+
+            if (
+                cell === 'X'
+            ) {
+
+                div.classList.add(
+                    'x'
+                );
+
+            }
+
+            if (
+                cell === 'O'
+            ) {
+
+                div.classList.add(
+                    'o'
+                );
+
+            }
+
+            div.textContent =
+                cell;
+
+            div.onclick =
+                function() {
+
+                    handleTicTacToeClick(
+                        index
+                    );
+
+                };
+
+            board.appendChild(
+                div
+            );
+
+        }
+
+    );
+
+}
+
+
+function handleTicTacToeClick(
+    index
+) {
+
+    if (
+
+        tttBoard[index] ||
+
+        tttGameOver
+
+    ) {
+
+        return;
+
+    }
+
+    tttBoard[index] =
+        'X';
+
+    renderTicTacToe();
+
+    if (
+        checkTicTacToeWinner(
+            'X'
+        )
+    ) {
+
+        tttGameOver = true;
+
+        document.getElementById(
+            'tttStatus'
+        ).textContent =
+            '🎉 You win!';
+
+        return;
+
+    }
+
+    if (
+        tttBoard.every(
+            cell => cell !== ''
+        )
+    ) {
+
+        tttGameOver = true;
+
+        document.getElementById(
+            'tttStatus'
+        ).textContent =
+            "🤝 It's a tie!";
+
+        return;
+
+    }
+
+    document.getElementById(
+        'tttStatus'
+    ).textContent =
+        'AI is thinking...';
+
+    setTimeout(
+        tttAIMove,
+        400
+    );
+
+}
+
+
+function checkTicTacToeWinner(
+    player
+) {
+
+    return tttWinningCombinations.some(
+
+        function(
+            combination
+        ) {
+
+            return combination.every(
+
+                index =>
+                    tttBoard[index] ===
+                    player
+
+            );
+
+        }
+
+    );
+
+}
+
+
+function tttAIMove() {
+
+    if (
+        tttGameOver
+    ) {
+
+        return;
+
+    }
+
+    const emptyCells =
+        tttBoard
+            .map(
+                (cell, index) =>
+                    cell === ''
+                        ? index
+                        : null
+            )
+            .filter(
+                index =>
+                    index !== null
+            );
+
+    if (
+        emptyCells.length === 0
+    ) {
+
+        return;
+
+    }
+
+    /* Try to win */
+
+    for (
+        let i = 0;
+        i < emptyCells.length;
+        i++
+    ) {
+
+        const index =
+            emptyCells[i];
+
+        tttBoard[index] =
+            'O';
+
+        if (
+            checkTicTacToeWinner(
+                'O'
+            )
+        ) {
+
+            tttGameOver = true;
+
+            renderTicTacToe();
+
+            document.getElementById(
+                'tttStatus'
+            ).textContent =
+                '😎 AI wins!';
+
+            return;
+
+        }
+
+        tttBoard[index] =
+            '';
+
+    }
+
+    /* Block player */
+
+    for (
+        let i = 0;
+        i < emptyCells.length;
+        i++
+    ) {
+
+        const index =
+            emptyCells[i];
+
+        tttBoard[index] =
+            'X';
+
+        if (
+            checkTicTacToeWinner(
+                'X'
+            )
+        ) {
+
+            tttBoard[index] =
+                'O';
+
+            renderTicTacToe();
+
+            document.getElementById(
+                'tttStatus'
+            ).textContent =
+                'Your turn (X)';
+
+            return;
+
+        }
+
+        tttBoard[index] =
+            '';
+
+    }
+
+    /* Take center */
+
+    if (
+        tttBoard[4] === ''
+    ) {
+
+        tttBoard[4] =
+            'O';
+
+    }
+
+    /* Otherwise random move */
+
+    else {
+
+        const randomIndex =
+            emptyCells[
+                Math.floor(
+                    Math.random() *
+                    emptyCells.length
+                )
+            ];
+
+        tttBoard[randomIndex] =
+            'O';
+
+    }
+
+    if (
+        checkTicTacToeWinner(
+            'O'
+        )
+    ) {
+
+        tttGameOver = true;
+
+        renderTicTacToe();
+
+        document.getElementById(
+            'tttStatus'
+        ).textContent =
+            '😎 AI wins!';
+
+        return;
+
+    }
+
+    if (
+        tttBoard.every(
+            cell => cell !== ''
+        )
+    ) {
+
+        tttGameOver = true;
+
+        renderTicTacToe();
+
+        document.getElementById(
+            'tttStatus'
+        ).textContent =
+            "🤝 It's a tie!";
+
+        return;
+
+    }
+
+    renderTicTacToe();
+
+    document.getElementById(
+        'tttStatus'
+    ).textContent =
+        'Your turn (X)';
+
+}
+
+
+/* =========================
+   STYLE STUDIO
+========================= */
+
+function openStyleStudio() {
+
+    window.open(
+        'https://poki.com/en/g/janes-fashion-studio',
+        '_blank'
+    );
+
+}
+
+
+/* =========================
+   MEMORY MATCH
+========================= */
+
+const memorySymbols = [
+
+    '🎂',
+
+    '🎀',
+
+    '💗',
+
+    '🌸',
+
+    '✨',
+
+    '👑',
+
+    '🧁',
+
+    '🎁'
+
+];
+
+let memoryCards = [];
+
+let memoryFlipped = [];
+
+let memoryMatched = 0;
+
+let memoryMoves = 0;
+
+let memoryLocked = false;
+
+
+function startMemory() {
+
+    openGame(
+        'gameMemory'
+    );
+
+    memoryCards = [
+
+        ...memorySymbols,
+
+        ...memorySymbols
+
+    ];
+
+    memoryCards.sort(
+        () =>
+            Math.random() - 0.5
+    );
+
+    memoryFlipped = [];
+
+    memoryMatched = 0;
+
+    memoryMoves = 0;
+
+    memoryLocked = false;
+
+    document.getElementById(
+        'memoryMoves'
+    ).textContent =
+        memoryMoves;
+
+    document.getElementById(
+        'memoryPairs'
+    ).textContent =
+        memoryMatched;
+
+    renderMemory();
+
+}
+
+
+function renderMemory() {
+
+    const board =
+        document.getElementById(
+            'memoryBoard'
+        );
+
+    board.innerHTML =
+        '';
+
+    memoryCards.forEach(
+
+        function(
+            symbol,
+            index
+        ) {
+
+            const card =
+                document.createElement(
+                    'button'
+                );
+
+            card.className =
+                'memory-card';
+
+            card.textContent =
+                symbol;
+
+            card.dataset.index =
+                index;
+
+            card.onclick =
+                function() {
+
+                    flipMemoryCard(
+                        index
+                    );
+
+                };
+
+            board.appendChild(
+                card
+            );
+
+        }
+
+    );
+
+}
+
+
+function flipMemoryCard(
+    index
+) {
+
+    if (
+
+        memoryLocked ||
+
+        memoryFlipped.includes(
+            index
+        )
+
+    ) {
+
+        return;
+
+    }
+
+    const cards =
+        document.querySelectorAll(
+            '.memory-card'
+        );
+
+    if (
+        cards[index].classList.contains(
+            'matched'
+        )
+    ) {
+
+        return;
+
+    }
+
+    cards[index].classList.add(
+        'flipped'
+    );
+
+    memoryFlipped.push(
+        index
+    );
+
+    if (
+        memoryFlipped.length === 2
+    ) {
+
+        memoryMoves++;
+
+        document.getElementById(
+            'memoryMoves'
+        ).textContent =
+            memoryMoves;
+
+        checkMemoryMatch();
+
+    }
+
+}
+
+
+function checkMemoryMatch() {
+
+    memoryLocked = true;
+
+    const first =
+        memoryFlipped[0];
+
+    const second =
+        memoryFlipped[1];
+
+    const cards =
+        document.querySelectorAll(
+            '.memory-card'
+        );
+
+    if (
+
+        memoryCards[first] ===
+        memoryCards[second]
+
+    ) {
+
+        cards[first].classList.add(
+            'matched'
+        );
+
+        cards[second].classList.add(
+            'matched'
+        );
+
+        memoryMatched++;
+
+        document.getElementById(
+            'memoryPairs'
+        ).textContent =
+            memoryMatched;
+
+        memoryFlipped = [];
+
+        memoryLocked = false;
+
+        if (
+            memoryMatched === 8
+        ) {
+
+            setTimeout(
+
+                function() {
+
+                    alert(
+                        '🎉 You found all the pairs! Happy Birthday! 🎀'
+                    );
+
+                },
+
+                300
+
+            );
+
+        }
+
+    }
+
+    else {
+
+        setTimeout(
+
+            function() {
+
+                cards[first]
+                    .classList
+                    .remove(
+                        'flipped'
+                    );
+
+                cards[second]
+                    .classList
+                    .remove(
+                        'flipped'
+                    );
+
+                memoryFlipped = [];
+
+                memoryLocked = false;
+
+            },
+
+            800
+
+        );
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>
